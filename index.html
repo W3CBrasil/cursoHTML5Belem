@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset=utf-8>
+
+<!-- meta name="viewport"
+serve para dizer pro navegador como
+a página reduzida vai ficar no dispositivo 
+
+initial-scaleL: controla a largura que o site vai ser mostrado no celular e também o zoom
+//
+Servem para estabelecer parâmetros de zoom para o usuário
+maximum-scale
+minimum-scale
+user-scalable -->
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<!-- device-width é o que diz a largura do device como parâmetro -->
+
+
+<title>Tutorial HTML5 - belém do pará</title>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+
+<!-- Aqui fazendo a referência ao css que estabelece que o site vai ser responsivo -->
+</head>
+<body>
+<div id="pagewrap">
+
+  <header id="header">
+
+    <hgroup>
+      <h1 id="site-logo"><a href="http://www.w3c.br/"><img src="http://www.w3c.br/pub/Leiaute/WebModeloW3CImagens/logo-w3c-screen-lg-br.png" alt="logo w3c"></a></h1>
+      <h2 id="site-description">Exemplo para curso de HTML5 em Belém - 2013</h2>
+    </hgroup>
+
+    <nav>
+      <ul id="main-nav" class="clearfix">
+        <li><a href="file:///Users/yaso/Documents/w3c/CursoHTML5/index.html">Início</a></li>
+        <li><a href="file:///Users/yaso/Documents/w3c/CursoHTML5/geolocation.html">Geolocation API</a></li>
+        <li><a href="file:///Users/yaso/Documents/w3c/CursoHTML5/canvas.html">Canvas API</a></li>
+      </ul>
+      <!-- /#main-nav --> 
+    </nav>
+
+    <form id="searchform">
+      <input type="search" id="s" placeholder="Search">
+    </form>
+
+  </header>
+ <!-- /#header -->
+  
+  <div id="content">
+
+    <article class="post clearfix">
+
+      <header>
+        <h1 class="post-title"><a href="#">Just a Post Title</a></h1>
+        <p class="post-meta"><time class="post-date" datetime="2011-05-08" pubdate>May 8, 2011</time> <em>in</em> <a href="#">Category</a></p>
+      </header>
+      <figure class="post-image"> 
+        <img src="https://farm4.staticflickr.com/3743/9668367276_53d55781c0_z.jpg" /> 
+      </figure>
+      <p>O grupo de trabalho do HTML publicou hoje a última chamada para a documentação de rascunho que define o uso da extensão para descrição de imagens do HTML5. O documento específica o uso do atributo "longdesc" que habilita o autor do conteúdo a prover uma descrição maior e textual para imagens mais complexas, trabalho no qual faz parte de umas das premissas Plataforma Aberta da Web, iniciado pelo W3C, que é garantir a acessibilidade para pessoas com deficiência. O documento foi desenvolvido pela Força Tarefa de Acessibilidade do HTML coordenada pelo Grupo de Trabalho do HTML e pelo grupo de Protocolos e Formatos do WAI (WAI Protocols and Formats Working Group - PFWG)</p>
+
+      
+ <!-- /Vimeo -->
+
+      <h3>API's: conceito</h3>
+      <div class="video">
+     <iframe src="http://player.vimeo.com/video/49392667" width="500" height="281" frameborder="0"></iframe>
+
+      </div>
+
+      <!-- /.video -->
+
+      <h3>YouTube</h3>
+      <div class="video">
+                  <iframe width="560" height="315" src="http://www.youtube.com/embed/sp-ocnwcBIw?list=PLFDC8101A4BB555A0" frameborder="0" allowfullscreen></iframe>
+        </object>
+      </div>
+      <!-- /.video -->
+
+    </article>
+    <!-- /.post -->
+
+  </div>
+  <!-- /#content --> 
+  
+  
+  <aside id="sidebar">
+
+    <section class="widget">
+      <h4 class="widgettitle">Materiais de referência</h4>
+      <ul>
+        <li><a href="http://www.w3c.br/Cursos/CursoHTML5">Curso HTML5</a></li>
+        <li><a href="http://www.w3c.br/Cursos/CursoDadosAbertos">Dados Abertos</a></li>
+        <li><a href="http://www.w3c.br/Cursos/CursoCSS3">Curso Css3</a></li>
+      </ul>
+    </section>
+    <!-- /.widget -->
+
+    <section class="widget clearfix">
+      <h4 class="widgettitle">Flickr</h4>
+      <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8.&display=latest&size=s&layout=x&source=user&user=41698799@N02"></script> 
+    </section>
+    <!-- /.widget -->
+            
+
+
+  </aside>
+  <!-- /#sidebar -->
+
+  <footer id="footer">
+  
+    <p>Teste</p>
+
+  </footer>
+  <!-- /#footer --> 
+  
+</div>
+
+
+
+<!--testaaqui -->
+
+
+</body>
+</html>

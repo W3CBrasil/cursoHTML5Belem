@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset=utf-8>
+
+
+<!-- meta name="viewport"
+serve para dizer pro navegador como
+a página reduzida vai ficar no dispositivo 
+
+initial-scaleL: controla a largura que o site vai ser mostrado no celular e também o zoom
+//
+Servem para estabelecer parâmetros de zoom para o usuário
+maximum-scale
+minimum-scale
+user-scalable -->
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<!-- device-width é o que diz a largura do device como parâmetro -->
+
+
+<title>Tutorial HTML5 - belém do pará</title>
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+
+<!-- Aqui fazendo a referência ao css que estabelece que o site vai ser responsivo -->
+</head>
+<body>
+<div id="pagewrap">
+
+  <header id="header">
+
+    <hgroup>
+      <h1 id="site-logo"><a href="http://www.w3c.br/"><img src="http://www.w3c.br/pub/Leiaute/WebModeloW3CImagens/logo-w3c-screen-lg-br.png" alt="logo w3c"></a></h1>
+    </hgroup>
+
+    <nav>
+      <ul id="main-nav" class="clearfix">
+        <li><a href="file:///Users/yaso/Documents/w3c/CursoHTML5/index.html">Início</a></li>
+        <li><a href="file:///Users/yaso/Documents/w3c/CursoHTML5/geolocation.html">Geolocation API</a></li>
+        <li><a href="file:///Users/yaso/Documents/w3c/CursoHTML5/canvas.html">Canvas API</a></li>
+      </ul>
+      <!-- /#main-nav --> 
+    </nav>
+
+    <form id="searchform">
+      <input type="search" id="s" placeholder="Search">
+    </form>
+
+  </header>
+ <!-- /#header -->
+
+<body>
+ <canvas id="myCanvas" width="400" height="400"
+	style="border:1px solid #000000; margin-top: 250px";>
+</canvas> 
+
+<!-- Para texto no canvas, atenção para:
+
+    font - define a família tipográfica
+    fillText(text,x,y) - Desenha filled text no canvas
+    strokeText(text,x,y) - Imprime texto no canvas (sem preenchimento) 
+--> 
+
+    // fazer coisas aqui 
+    <script type="text/javascript">
+     var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(188, 150);
+      context.quadraticCurveTo(288, 0, 388, 150);
+      context.lineWidth = 10;
+
+      // line color
+      context.strokeStyle = 'black';
+      context.stroke();
+    </script>
+</body>
