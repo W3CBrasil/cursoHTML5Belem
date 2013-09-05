@@ -21,7 +21,8 @@ Aqui estão os documentos utilizados para as aulas, bem como a maioria dos links
 <li>http://www.w3c.br/cursos/html5/conteudo/capitulo13.html</li>
 <li>http://www.w3.org/TR/2010/WD-html5-20100624/author/dnd.html</li>
 <li>http://www.w3.org/html/logo/#the-technology</li>
-<li>
+</ol>
 
-<ol><li>Anatomia de um website responsivo: http://www.ifd.com.br/wp-content/uploads/2013/08/responsive_website2.jpg</li>
+<ol>
+<li>Anatomia de um website responsivo: http://www.ifd.com.br/wp-content/uploads/2013/08/responsive_website2.jpg</li>
 <li>Apresentação sobre API's HTML5 http://bit.ly/15mn1TR</li></ol>
