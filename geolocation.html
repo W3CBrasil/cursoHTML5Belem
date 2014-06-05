@@ -1,121 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset=utf-8>
-
-
-
-<meta name="viewport" content="width=device-width; initial-scale=1.0">
-<title>Demonstração Geolocation com mapa</title>
-
-
-<!-- main css -->
-<link href="style.css" rel="stylesheet" type="text/css">
-
-<script src="js/h5utils.js"></script>
-</head>
-
-
-<header>
-<!-- meta name="viewport"
-serve para dizer pro navegador como
-a página reduzida vai ficar no dispositivo 
-
-initial-scaleL: controla a largura que o site vai ser mostrado no celular e também o zoom
-//
-Servem para estabelecer parâmetros de zoom para o usuário
-maximum-scale
-minimum-scale
-user-scalable -->
-
-<meta name="viewport" content="width=device-width; initial-scale=1.0">
-<!-- device-width é o que diz a largura do device como parâmetro -->
-
-
-<title>Tutorial HTML5 - belém do pará</title>
-
-<link href="style.css" rel="stylesheet" type="text/css">
-<link href="media-queries.css" rel="stylesheet" type="text/css">
-
-<!-- Aqui fazendo a referência ao css que estabelece que o site vai ser responsivo -->
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
 </head>
 <body>
-<div id="pagewrap">
+<p id="demo">
+  Clique aqui para obter coordenadas! <br>
+  Para funcionar libere a funcionalidade rastreamento de localização em seu navegador!
+</p>
 
-  <header id="header">
-
-    <hgroup>
-      <h1 id="site-logo"><a href="http://www.w3c.br/"><img src="http://www.w3c.br/pub/Leiaute/WebModeloW3CImagens/logo-w3c-screen-lg-br.png" alt="logo w3c"></a></h1>
-      <h2 id="site-description">Exemplo para curso de HTML5 em Belém - 2013</h2>
-    </hgroup>
-
-    <nav>
-      <ul id="main-nav" class="clearfix">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="geolocation.html">Geolocation</a></li>
-      </ul>
-      <!-- /#main-nav --> 
-    </nav>
-
-    <form id="searchform">
-      <input type="search" id="s" placeholder="Search">
-    </form>
-
-      <h1>API Geolocation: coisa linda de se ver</h1>
-    </header>
-<meta name="viewport" content="width=620" />
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <article>
-      <p>Procurando você... <span id="status">calma...</span></p>
-    </article>
+<button onclick="getLocation()">Tente!</button>
 <script>
-function success(position) {
-  var s = document.querySelector('#status');
-  
-  if (s.className == 'success') {    
-    return;
+  var x=document.getElementById("demo");
+  function getLocation(){
+    if (navigator.geolocation)
+      {
+      navigator.geolocation.getCurrentPosition(showPosition);
+      }
+    else{x.innerHTML="Geolocation não é suportado por esse browser :/";}
   }
-  
-  s.innerHTML = "achamos!!";
-  s.className = 'success';
-  
-  var mapcanvas = document.createElement('div');
-  mapcanvas.id = 'mapcanvas';
-  mapcanvas.style.height = '400px';
-  mapcanvas.style.width = '560px';
-    
-  document.querySelector('article').appendChild(mapcanvas);
-  
-  var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-  var myOptions = {
-    zoom: 15,
-    center: latlng,
-    mapTypeControl: false,
-    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
-  
-  var marker = new google.maps.Marker({
-      position: latlng, 
-      map: map, 
-      title:"A gente está aqui! (ou perto daqui: "+position.coords.accuracy+")"
-  });
-}
 
-function error(msg) {
-  var s = document.querySelector('#status');
-  s.innerHTML = typeof msg == 'string' ? msg : "failed";
-  s.className = 'fail';
-  
-}
-
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(success, error);
-} else {
-  error('not supported');
-}
-
+  function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }
 </script>
 </body>
 </html>
